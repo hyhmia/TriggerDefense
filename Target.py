@@ -13,7 +13,7 @@ MODEL = "ResNet50"
 EPOCHS = 10
 BATCH_SIZE = 64
 LEARNING_RATE = 5e-5
-WEIGHTS_PATH = "weights/Target/{}_{}_{}.hdf5".format(DATA_NAME, MODEL, EPOCHS)
+WEIGHTS_PATH = "weights/Baseline/{}_{}_{}.hdf5".format(DATA_NAME, MODEL, EPOCHS)
 (x_train, y_train), (x_test, y_test), _= globals()['load_' + DATA_NAME]("Target")
 
 
