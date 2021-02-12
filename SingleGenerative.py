@@ -22,7 +22,7 @@ EPOCHS = 50
 
 BASE = 10
 BATCH_SIZE = 64
-LEARNING_RATE_gen = 5e-3
+LEARNING_RATE_gen = 1e-3
 LEARNING_RATE_disc = 5e-5
 BASE_WEIGHTS = f'weights/Baseline/{DATA_NAME}_{MODEL}_10.hdf5'
 WEIGHTS_PATH_GEN = f"weights/Gan_Defense/Generator/{DATA_NAME}_{MODEL}_{EPOCHS}_{a}_{BASE}.hdf5"
