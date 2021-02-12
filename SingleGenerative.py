@@ -87,9 +87,9 @@ alpha = tf.constant(a, dtype=tf.float32)
 @tf.function
 def train_step(images, labels):
     with tf.GradientTape() as gen_tape, tf.GradientTape() as disc_tape:
-        generated_image = generator(base_noise, training=True)
+        generated_image = generator(base_noise)
         inputs = generated_image * alpha + images*(1-alpha)
-        outputs = baseline(inputs, training=True)
+        outputs = baseline(inputs)
         ori_loss = loss_fn(labels, baseline(images, training=False))
         loss_1 = loss_fn(labels, outputs)
         loss_2 = tf.reduce_sum(tf.abs(generated_image))

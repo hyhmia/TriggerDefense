@@ -26,10 +26,10 @@ BASE = 10
 BATCH_SIZE = 64
 LEARNING_RATE_gen = 1e-3
 LEARNING_RATE_disc = 5e-5
-RANDOM_SEED = 2021
+
 BASE_WEIGHTS = f'weights/Baseline/{DATA_NAME}_{MODEL}_{BASE}.hdf5'
-WEIGHTS_PATH_GEN = f"weights/Gan_Duel/Generator/{DATA_NAME}_{MODEL}_{EPOCHS}_{a}_{BASE}_{RANDOM_SEED}.hdf5"
-WEIGHTS_PATH_DISC = f"weights/Gan_Duel/Discriminator/{DATA_NAME}_{MODEL}_{EPOCHS}_{a}_{BASE}_{RANDOM_SEED}.hdf5"
+WEIGHTS_PATH_GEN = f"weights/Gan_Duel/Generator/{DATA_NAME}_{MODEL}_{EPOCHS}_{a}_{BASE}.hdf5"
+WEIGHTS_PATH_DISC = f"weights/Gan_Duel/Discriminator/{DATA_NAME}_{MODEL}_{EPOCHS}_{a}_{BASE}.hdf5"
 (x_train, y_train), (x_test, y_test), _= globals()['load_' + DATA_NAME]("Target")
 
 x_train = tf.convert_to_tensor(x_train, dtype=tf.float32)
